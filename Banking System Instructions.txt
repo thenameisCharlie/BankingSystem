@@ -1,0 +1,19 @@
+
+Banking System
+1. Checking Account:
+   - Deposit
+   - Withdraw
+   - Transfer to another account
+   - Balance inquires
+   - overdraft fee ($35)
+   - monthly maintenance fee ($5)
+   - Create a new account
+
+2. Savings Account
+   - Deposit
+   - Withdraw
+   - Transfer to another account
+   - Balance inquires
+   - 5% interest monthly
+
+Generate a random account number when a new account is created
