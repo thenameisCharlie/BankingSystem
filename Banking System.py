@@ -2,7 +2,7 @@
 import random
 
 class BankAccount: 
-    def __init__(self, accountNum, customerName, balance):
+    def __init__(self, customerName, balance):
         self.accountNum = BankAccount._account_num_randomizer()
         self.customerName = customerName
         self.balance = balance
