@@ -6,7 +6,6 @@ Banking System
    - Transfer to another account
    - Balance inquires
    - overdraft fee ($35)
-   - monthly maintenance fee ($5)
    - Create a new account
 
 2. Savings Account
@@ -14,6 +13,9 @@ Banking System
    - Withdraw
    - Transfer to another account
    - Balance inquires
-   - 5% interest monthly
 
-Generate a random account number when a new account is created
+3. What to add in the future
+   - Savings account monthly5% interest 
+   - Checking account montly maintenance fee 
+
+Generate a random account number when a new account is created 
