@@ -48,11 +48,8 @@ class SavingsAccount(BankAccount):
         if self.balance >= amount:
             self.balance -= amount
             checkingAccount.balance += amount
-<<<<<<< HEAD
-=======
 
 
 #Testing cases
 bankAccount1 = CheckingAccount("Carlos Villatoro", 3000)
 print(bankAccount1.check_balance())
->>>>>>> f195dd134eabbdebf6867d7b3a591b2cb779e771
