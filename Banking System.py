@@ -11,7 +11,7 @@ class BankAccount:
     #Function creates a random account number for the user
     @staticmethod
     def _account_num_randomizer():
-        random.randint(1000, 5000)
+        return random.randint(1000, 5000)
     
     #Function that deposits money to account
     def deposit(self, amount):
@@ -23,7 +23,7 @@ class BankAccount:
     
     #Function to check balance
     def check_balance(self):
-        return self.balance
+        return self.balance, self.customerName, self.accountNum
 
 class CheckingAccount(BankAccount):
     #Overdraft fee for accounts that are in the negative
@@ -48,3 +48,11 @@ class SavingsAccount(BankAccount):
         if self.balance >= amount:
             self.balance -= amount
             checkingAccount.balance += amount
+<<<<<<< HEAD
+=======
+
+
+#Testing cases
+bankAccount1 = CheckingAccount("Carlos Villatoro", 3000)
+print(bankAccount1.check_balance())
+>>>>>>> f195dd134eabbdebf6867d7b3a591b2cb779e771
