@@ -23,7 +23,14 @@ class BankAccount:
     
     #Function to check balance
     def check_balance(self):
-        return self.balance, self.customerName, self.accountNum
+        # return self.customerName, self.accountNum, self.balance
+        displayDict = {"Name": self.customerName, "Account Number": self.accountNum, "Current Balance": self.balance}
+        lines = []
+        
+        for k, v in displayDict.items():
+            lines.append(f"{k}: {v}")
+        
+        return  "\n".join(lines) #converts the lines list into a string and it's joined by a space
 
 class CheckingAccount(BankAccount):
     #Overdraft fee for accounts that are in the negative
@@ -51,4 +58,11 @@ class SavingsAccount(BankAccount):
 
 #Testing cases
 bankAccount1 = CheckingAccount("Carlos Villatoro", 3000)
+
+
+
 print(bankAccount1.check_balance())
+
+
+
+
