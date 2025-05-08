@@ -61,6 +61,8 @@ class SavingsAccount(BankAccount):
 bankAccount1 = CheckingAccount("Carlos Villatoro", 3000)
 print(bankAccount1.check_balance())
 
+bankAccount1.deposit(200)
+print(f"\n{bankAccount1.check_balance()}")
 
-
-
+bankAccount1.withdraw(1090)
+print(f"\n{bankAccount1.check_balance()}")
