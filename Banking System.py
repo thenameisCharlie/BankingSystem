@@ -57,10 +57,8 @@ class SavingsAccount(BankAccount):
             checkingAccount.balance += amount
 
 #Testing cases
+#When you re-run an object it destroys the old object in the memory and creates a new one
 bankAccount1 = CheckingAccount("Carlos Villatoro", 3000)
-
-
-
 print(bankAccount1.check_balance())
 
 
