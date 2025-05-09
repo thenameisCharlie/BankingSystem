@@ -56,15 +56,20 @@ class SavingsAccount(BankAccount):
             self.balance -= amount
             checkingAccount.balance += amount
 
-#Testing cases
+#Testing cases with inputs
 #When you re-run an object it destroys the old object in the memory and creates a new one
-bankAccount1 = CheckingAccount("Carlos Villatoro", 3000)
-print(bankAccount1.check_balance())
+customerOptions = input(" 1. Deposit \n 2. Withdraw \n 3. Transfer \n 4. Open new account \n")
 
-bankAccount1.deposit(200)
-print(f"\n{bankAccount1.check_balance()}")
 
-bankAccount1.withdraw(1090)
-print(f"\n{bankAccount1.check_balance()}")
 
+
+# accountType = input("What type of account would you like to open (Checking or Savings)? ").lower()
+# customerName = input("Please provide your full name: ")
+# balanceAmount = input("Enter a balance amount for your new account: ")
+
+# if accountType == "checking" or accountType == "savings": 
+#     print("This is correct!")
+
+# else:
+#     print("Invalid entry. Please try again")
 
