@@ -18,4 +18,4 @@ Banking System
    - Savings account monthly5% interest 
    - Checking account montly maintenance fee 
 
-Generate a random account number ONLY when a new account is created. If the same account is generated keep the same account number
+Convert the banking system into input requests
