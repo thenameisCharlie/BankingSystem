@@ -62,12 +62,12 @@ customerName = input("Please enter your name: ")
 
 bankAccount1 = BankAccount(customerName)
 
-customerOptions = input(" 1. Deposit \n 2. Withdraw \n 3. Transfer \n 4. Open new account \n")
+customerOptions = input(" 1. Deposit \n 2. Withdraw \n 3. Transfer \n 4. Open new account \n 5. Check Balance")
 
 
 if customerOptions == 1:
     depositAmount = input("How much would you like to deposit? ")
-    bankAccount1.deposit()
+    bankAccount1.deposit(depositAmount)
 
 
 # accountType = input("What type of account would you like to open (Checking or Savings)? ").lower()
