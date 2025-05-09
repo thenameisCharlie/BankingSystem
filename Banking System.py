@@ -3,7 +3,7 @@ import random
 
 class BankAccount: 
     #constructor (How you create an instanace of an object)
-    def __init__(self, customerName, balance):
+    def __init__(self, customerName, balance = 0):
         self.accountNum = BankAccount._account_num_randomizer()
         self.customerName = customerName
         self.balance = balance
@@ -58,9 +58,16 @@ class SavingsAccount(BankAccount):
 
 #Testing cases with inputs
 #When you re-run an object it destroys the old object in the memory and creates a new one
+customerName = input("Please enter your name: ")
+
+bankAccount1 = BankAccount(customerName)
+
 customerOptions = input(" 1. Deposit \n 2. Withdraw \n 3. Transfer \n 4. Open new account \n")
 
 
+if customerOptions == 1:
+    depositAmount = input("How much would you like to deposit? ")
+    bankAccount1.deposit()
 
 
 # accountType = input("What type of account would you like to open (Checking or Savings)? ").lower()
