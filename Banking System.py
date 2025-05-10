@@ -134,3 +134,4 @@ while customerOptions != 6:
                 print("Invalid entry, please try again")
 
 
+#Things to update to improve my code: add an input function 
