@@ -64,29 +64,38 @@ bankAccount1 = CheckingAccount(customerName)
 bankAccount2 = SavingsAccount(customerName)
 customerOptions = 0
 
+def prompt_message(msg):
+    try:
+        return int(input(msg))
+
+    except ValueError:
+        print("\nInvalid entry! Please try again")
+        return prompt_message(msg)
+
+
 while customerOptions != 6:
-    customerOptions = int(input(f"What would you like to do {customerName}?\n 1. Deposit \n 2. Withdraw \n 3. Transfer \n 4. Open new account \n 5. Check Balance\n 6. Exit\n\n"))
+    customerOptions = prompt_message(f"What would you like to do {customerName}?\n 1. Deposit \n 2. Withdraw \n 3. Transfer \n 4. Open new account \n 5. Check Balance\n 6. Exit\n\n")
 
     if customerOptions == 1:
-        depositAmount = int(input("How much would you like to deposit? "))
+        depositAmount = prompt_message("How much would you like to deposit? ")
         bankAccount1.deposit(depositAmount)
 
     elif customerOptions == 2: 
-        withdrawAmount = int(input("How much would you like to withdraw? "))
+        withdrawAmount = prompt_message("How much would you like to withdraw? ")
         bankAccount1.withdraw(withdrawAmount)
 
     elif customerOptions == 3:
         #This while loop along with the if statement simulates a do while loop
         while True:
-            accountOption = int(input("Which account would you like to transfer to?\n 1. Checking\n 2. Savings\n "))
+            accountOption = prompt_message("Which account would you like to transfer to?\n 1. Checking\n 2. Savings\n ")
 
             if accountOption == 1:
-                transferAmount = int(input("What is the amount you would like to transfer? "))
+                transferAmount = prompt_message("What is the amount you would like to transfer? ")
                 bankAccount2.transfer_to_checking(transferAmount, bankAccount1)
                 break
             
             elif accountOption == 2:
-                transferAmount = int(input("What is the amount you would like to transfer? "))
+                transferAmount = prompt_message("What is the amount you would like to transfer? ")
                 bankAccount1.transfer_to_savings(transferAmount, bankAccount2)
                 break
             
@@ -96,7 +105,7 @@ while customerOptions != 6:
     elif customerOptions == 4:
         
         while True:
-            accountType = int(input("What type of account would you like to open (\n 1. Checking\n 2. Savings\n)? "))
+            accountType = prompt_message("What type of account would you like to open (\n 1. Checking\n 2. Savings\n)? ")
 
             
             if accountType == 1:
@@ -115,7 +124,7 @@ while customerOptions != 6:
     elif customerOptions == 5:
         
         while True: 
-            accountBalanceCheck = int(input("Which account would you like to check \n 1. Checking\n 2. Savings \n 3. All \n"))
+            accountBalanceCheck = prompt_message("Which account would you like to check \n 1. Checking\n 2. Savings \n 3. All \n")
 
             if accountBalanceCheck == 1: 
                 print(f"\n {bankAccount1.check_balance()}")
@@ -127,7 +136,7 @@ while customerOptions != 6:
             
             elif accountBalanceCheck == 3:
                 print(f"\n {bankAccount1.check_balance()}\n")
-                print(f"{bankAccount2.check_balance()}")
+                print(f"{bankAccount2.check_balance()}\n")
                 break
         
             else:
