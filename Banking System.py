@@ -115,7 +115,7 @@ while customerOptions != 6:
     elif customerOptions == 5:
         
         while True: 
-            accountBalanceCheck = int(input("Which account would you like to check \n 1. Checking\n 2. Savings \n 3. All"))
+            accountBalanceCheck = int(input("Which account would you like to check \n 1. Checking\n 2. Savings \n 3. All \n"))
 
             if accountBalanceCheck == 1: 
                 print(f"\n {bankAccount1.check_balance()}")
