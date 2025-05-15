@@ -31,7 +31,9 @@ def main():
                 bankAccount1.deposit(depositAmount)
                 print(f"${depositAmount} has been deposited into your Checking account")
             
-            #if depositAccountOption ==2:
+            if depositAccountOption ==2:
+                bankAccount2.deposit(depositAmount)
+                print(f"${depositAmount} has been deposited into your Savings account")
 
 
         elif customerOptions == 2: 
