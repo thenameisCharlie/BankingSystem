@@ -1,7 +1,11 @@
 from savings_account import SavingsAccount
 from checking_account import CheckingAccount
+from bankgui import display_gui
 
 def main():
+
+    display_gui()
+    
     #Testing cases with inputs
     #When you re-run an object it destroys the old object in the memory and creates a new one
     customerName = input("Please enter your name: ")
@@ -9,6 +13,7 @@ def main():
     bankAccount1 = CheckingAccount(customerName)
     bankAccount2 = SavingsAccount(customerName)
     customerOptions = 0
+    
 
     #function that converts the inputs to ints and returns an error message if the input is not an integer
     def prompt_message(msg):
@@ -18,7 +23,6 @@ def main():
         except ValueError:
             print("\nInvalid entry! Please try again")
             return prompt_message(msg)
-
 
     while customerOptions != 6:
         customerOptions = prompt_message(f"What would you like to do {customerName}?\n 1. Deposit \n 2. Withdraw \n 3. Transfer \n 4. Open new account \n 5. Check Balance\n 6. Exit\n\n")
@@ -101,4 +105,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+    
