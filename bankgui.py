@@ -22,8 +22,8 @@ def display_gui():
     label.pack(pady=(0, 10))
     customerName = tk.Entry(centerFrame, width=30)
     customerName.pack() #Center items in the frame automatically
-    tk.Button(guiScreen, text="Enter", width=15)
-    # nameButton.pack()
+    tk.Button(guiScreen, text="Enter", width=15).pack(pady=10)
+    
 
     guiScreen.mainloop()
 
@@ -43,3 +43,4 @@ def display_gui():
         tk.Radiobutton(guiScreen, text="Open new account", variable=optionSelected, value=4).pack()
         tk.Radiobutton(guiScreen, text="Check balance", variable=optionSelected, value=5).pack()
         tk.Radiobutton(guiScreen, text="Exit", variable=optionSelected, value=6).pack()
+
